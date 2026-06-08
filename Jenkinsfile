@@ -6,7 +6,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/yourrepo/flask-cicd-demo.git'
+                git 'https://github.com/yashi-design/flask-cicd-demo.git'
             }
         }
 
