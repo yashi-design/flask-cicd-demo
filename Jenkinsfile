@@ -16,6 +16,15 @@ pipeline {
             }
         }
 
+        stage('Debug') {
+    steps {
+        sh 'pwd'
+        sh 'ls -la'
+        sh 'which docker'
+        sh 'docker --version'
+           }
+       }
+
         stage('Deploy') {
             steps {
                 sh '''
@@ -26,7 +35,9 @@ pipeline {
                 -p 5000:5000 \
                 flask-app
                 '''
-            }
-        }
+             }
+           }
+       }
     }
+  }
 }
